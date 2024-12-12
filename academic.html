@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Achievements</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .achievements-section {
+            display: flex;
+            flex-wrap: wrap;  /* Allows items to wrap into multiple lines if needed */
+            justify-content: space-around;  /* Evenly spaces the achievements */
+            max-width: 100%;
+            width: 100%;
+        }
+
+        .achievement {
+            margin: 10px;
+            text-align: center;
+            width: calc(33% - 20px);  /* Adjust the width to have 3 items per row with space */
+        }
+
+        @media screen and (max-width: 768px) {
+            .achievement {
+                width: calc(50% - 20px);  /* Two items per row on smaller screens */
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .achievement {
+                width: 100%;  /* One item per row on very small screens */
+            }
+        }
+
+        .achievement img {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .achievement img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Popup styling */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .popup img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+        }
+
+        .popup:target {
+            display: flex;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #ffffff;
+            color: #000000;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 1em;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .back-button:hover {
+            background-color: #cccccc;
+        }
+
+        .back-button:focus {
+            outline: 2px solid #ffffff;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #ffffff;
+            color: #000000;
+            padding: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-button" aria-label="Go back to the home page">&#8592; Back</a>
+
+    <h1 id="achievements">Academic Achievements</h1>
+
+    <div class="achievements-section">
+        <div class="achievement">
+            <a href="#popup1">
+                <img src="commendation1.jpeg" alt="Commendation for Game Design Studio 2">
+            </a>
+            <p>Commendation for Game Design Studio 2</p>
+        </div>
+
+        <div class="achievement">
+            <a href="#popup2">
+                <img src="commendation2.jpeg" alt="Commendation for Studio Project 1">
+            </a>
+            <p>Commendation for Studio Project 1</p>
+        </div>
+
+        <div class="achievement">
+            <a href="#popup3">
+                <img src="commendation3.jpeg" alt="Commendation for Games Programming 2">
+            </a>
+            <p>Commendation for Games Programming 2</p>
+        </div>
+
+        <div class="achievement">
+            <a href="#popup4">
+                <img src="commendation4.jpeg" alt="Commendation for High Distinction (Semester 2, 2023)">
+            </a>
+            <p>High Distinction for All Units (Semester 2, 2023)</p>
+        </div>
+
+        <div class="achievement">
+            <a href="#popup5">
+                <img src="commendation5.jpeg" alt="Commendation for High Distinction (Semester 1, 2024)">
+            </a>
+            <p>High Distinction for All Units (Semester 1, 2024)</p>
+        </div>
+
+        <div class="achievement">
+            <a href="#popup6">
+                <img src="commendation6.jpeg" alt="Commendation for Artificial Life, AI, and Virtual Environments">
+            </a>
+            <p>Commendation for Artificial Life, AI, and Virtual Environments</p>
+        </div>
+    </div>
+
+    <!-- Popups for full-size images -->
+    <div id="popup1" class="popup">
+        <a href="#achievements" class="close-btn">Close</a>
+        <img src="commendation1.jpeg" alt="Commendation for Game Design Studio 2">
+    </div>
+
+    <div id="popup2" class="popup">
+        <a href="#achievements" class="close-btn">Close</a>
+        <img src="commendation2.jpeg" alt="Commendation for Studio Project 1">
+    </div>
+
+    <div id="popup3" class="popup">
+        <a href="#achievements" class="close-btn">Close</a>
+        <img src="commendation3.jpeg" alt="Commendation for Games Programming 2">
+    </div>
+
+    <div id="popup6" class="popup">
+        <a href="#achievements" class="close-btn">Close</a>
+        <img src="commendation6.jpeg" alt="Commendation for Artificial Life, AI, and Virtual Environments">
+    </div>
+
+    <div id="popup4" class="popup">
+        <a href="#achievements" class="close-btn">Close</a>
+        <img src="commendation4.jpeg" alt="High Distinction for All Units (Semester 2, 2023)">
+    </div>
+
+    <div id="popup5" class="popup">
+        <a href="#achievements" class="close-btn">Close</a>
+        <img src="commendation5.jpeg" alt="High Distinction for All Units (Semester 1, 2024)">
+    </div>
+</body>
+</html>
