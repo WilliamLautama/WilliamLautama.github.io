@@ -3,154 +3,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Games Programmer Portfolio</title>
+    <meta name="description" content="William John Lautama's programming portfolio showcasing projects in C++, C#, Java, and Visual Scripting.">
+    <meta property="og:title" content="William John Lautama - Programming Portfolio">
+    <meta property="og:description" content="Explore William's diverse programming projects, including C++, C#, Java, and Visual Scripting.">
+    <meta property="og:image" content="preview-image.png">
+    <meta property="og:url" content="https://your-website-url.com/programming.html">
+    <title>Programming Portfolio</title>
     <style>
         body {
+            margin: 0;
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #1c1c1c;
-            color: #fff;
-        }
-        header {
-            background-color: #333;
-            padding: 20px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-        header p {
-            margin: 5px 0;
-            font-size: 1.2rem;
-        }
-        .container {
+            background-color: #000000;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
             padding: 20px;
         }
-        .section {
-            margin-bottom: 30px;
-        }
-        .section h2 {
-            font-size: 2rem;
-            border-bottom: 2px solid #555;
-            padding-bottom: 10px;
-        }
-        .project {
-            margin: 15px 0;
-        }
-        .project h3 {
-            font-size: 1.5rem;
-            margin-bottom: 5px;
-        }
-        .project p {
-            margin: 5px 0 10px;
-        }
-        .project img {
-            display: block;
-            margin: 10px 0;
-            max-width: 100%;
-            border: 2px solid #555;
-        }
-        footer {
-            background-color: #333;
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: clamp(1.8em, 4vw, 2.5em);
             text-align: center;
-            padding: 10px 0;
-            margin-top: 30px;
+            font-weight: bold;
         }
-        footer p {
-            margin: 0;
-            font-size: 1rem;
+
+        .programming-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .programming-item {
+            position: relative;
+            text-align: center;
+        }
+
+        .programming-item img {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            aspect-ratio: 1;
+            overflow: hidden;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .programming-item img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(255, 255, 255, 0.2);
+        }
+
+        .programming-item p {
+            margin-top: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .category-title {
+            margin-top: 40px;
+            font-size: clamp(1.5em, 3vw, 2em);
+            text-align: left;
+            width: 100%;
+            max-width: 1200px;
+            font-weight: bold;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #ffffff;
+            color: #000000;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 1em;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #cccccc;
+        }
+
+        .back-button:focus {
+            outline: 2px solid #ffffff;
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .category-title {
+                font-size: 1.5em;
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Games Programmer Portfolio</h1>
-        <p>Showcasing projects in C++, C#, Java, and Visual Scripting</p>
-    </header>
+    <a href="index.html" class="back-button" aria-label="Go back to the home page">&#8592; Back</a>
+    <h1>Programming Portfolio</h1>
 
-    <div class="container">
-        <!-- C++ Section -->
-        <div class="section">
-            <h2>C++ Projects</h2>
-            <div class="project">
-                <h3>Teixos</h3>
-                <p>A dynamic city-building simulation game showcasing advanced algorithms.</p>
-                <a href="teixos.html">
-					<img src="images/teixos.jpg" alt="Teixos Project" class="project-image">
-				</a>
-            </div>
-            <div class="project">
-                <h3>Blockout Shooter</h3>
-                <p>An arcade-style shooter featuring retro-inspired graphics and physics.</p>
-                <img src="images/blockout_shooter.jpg" alt="Blockout Shooter Project" class="project-image">
-            </div>
-            <div class="project">
-                <h3>A* Simulation</h3>
-                <p>A visualization of the A* pathfinding algorithm in action.</p>
-                <img src="images/astar_simulation.jpg" alt="A* Simulation Project" class="project-image">
-            </div>
-            <div class="project">
-                <h3>GOAP Simulation</h3>
-                <p>Demonstrates Goal-Oriented Action Planning for AI decision-making.</p>
-                <img src="images/goap_simulation.jpg" alt="GOAP Simulation Project" class="project-image">
-            </div>
+    <div class="category-title">C++:</div>
+    <div class="programming-section">
+        <div class="programming-item">
+            <a href="https://github.com/WilliamLautama/Teixos" target="_blank" aria-label="View Teixos project on GitHub">
+                <img src="teixos.png" alt="Teixos" loading="lazy">
+                <p>Teixos</p>
+            </a>
         </div>
-
-        <!-- C# Section -->
-        <div class="section">
-            <h2>C# Projects</h2>
-            <div class="project">
-                <h3>[K]night City</h3>
-                <p>An immersive urban exploration game built in Unity.</p>
-                <img src="images/knight_city.jpg" alt="[K]night City Project" class="project-image">
-            </div>
-            <div class="project">
-                <h3>Cheating Jack</h3>
-                <p>A narrative-driven platformer with dynamic difficulty scaling.</p>
-                <img src="images/cheating_jack.jpg" alt="Cheating Jack Project" class="project-image">
-            </div>
+        <div class="programming-item">
+            <a href="https://github.com/WilliamLautama/BlockoutShooter" target="_blank" aria-label="View Blockout Shooter project on GitHub">
+                <img src="blockout-shooter.png" alt="Blockout Shooter" loading="lazy">
+                <p>Blockout Shooter</p>
+            </a>
         </div>
-
-        <!-- Java Section -->
-        <div class="section">
-            <h2>Java Projects</h2>
-            <div class="project">
-                <h3>Elden Thing</h3>
-                <p>A humorous parody of Elden Ring with unique gameplay mechanics.</p>
-                <img src="images/elden_thing.jpg" alt="Elden Thing Project" class="project-image">
-            </div>
-            <div class="project">
-                <h3>Mario Evolutionary AI</h3>
-                <p>An AI-driven simulation showcasing evolutionary algorithms in a Mario-like game.</p>
-                <img src="images/mario_evolutionay_ai.jpg" alt="Mario Evolutionary AI Project" class="project-image">
-            </div>
+        <div class="programming-item">
+            <a href="https://github.com/WilliamLautama/A-Star-Simulation" target="_blank" aria-label="View A Star Simulation project on GitHub">
+                <img src="a-star-simulation.png" alt="A Star Simulation" loading="lazy">
+                <p>A* Simulation</p>
+            </a>
         </div>
-
-        <!-- Visual Scripting Section -->
-        <div class="section">
-            <h2>Visual Scripting Projects</h2>
-            <div class="project">
-                <h3>Bug Blitz</h3>
-                <p>A fast-paced action game created with Unreal Engine's Blueprint system.</p>
-                <img src="images/bug_blitz.jpg" alt="Bug Blitz Project" class="project-image">
-            </div>
-            <div class="project">
-                <h3>Robo Rumble</h3>
-                <p>A chaotic robot fighting game built using visual scripting tools.</p>
-                <img src="images/robo_rumble.jpg" alt="Robo Rumble Project" class="project-image">
-            </div>
-            <div class="project">
-                <h3>Post Mortem</h3>
-                <p>A haunting adventure game leveraging Unity's Playmaker plugin.</p>
-                <img src="images/post_mortem.jpg" alt="Post Mortem Project" class="project-image">
-            </div>
+        <div class="programming-item">
+            <a href="https://github.com/WilliamLautama/GOAP-Simulation" target="_blank" aria-label="View Goal Oriented Action Plan Simulation project on GitHub">
+                <img src="goap-simulation.png" alt="Goal Oriented Action Plan Simulation" loading="lazy">
+                <p>GOAP Simulation</p>
+            </a>
         </div>
     </div>
 
-    <footer>
-        <p>&copy; 2024 William John Lautama</p>
-    </footer>
+    <div class="category-title">C#:</div>
+    <div class="programming-section">
+        <div class="programming-item">
+            <a href="https://github.com/WilliamLautama/Knight-City" target="_blank" aria-label="View Knight City project on GitHub">
+                <img src="knight-city.png" alt="Knight City" loading="lazy">
+                <p>[K]night City</p>
+            </a>
+        </div>
+        <div class="programming-item">
+            <a href="https://github.com/WilliamLautama/CheatingJack" target="_blank" aria-label="View VR Cricket Training Simulation project on GitHub">
+                <img src="crickettraining.png" alt="VR Cricket Training Simulation" loading="lazy">
+                <p>VR Cricket Training Simulation</p>
+            </a>
+        </div>
+        <div class="programming-item">
+            <a href="https://github.com/WilliamLautama/CheatingJack" target="_blank" aria-label="View Cheating Jack project on GitHub">
+                <img src="cheating-jack.png" alt="Cheating Jack" loading="lazy">
+                <p>Cheating Jack</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="category-title">Java:</div>
+    <div class="programming-section">
+        <div class="programming-item">
+            <a href="https://github.com/WilliamLautama/EldenThing" target="_blank" aria-label="View Elden Thing project on GitHub">
+                <img src="elden-thing.png" alt="Elden Thing" loading="lazy">
+                <p>Elden Thing</p>
+            </a>
+        </div>
+        <div class="programming-item">
+            <a href="https://github.com/WilliamLautama/Mario-Evolutionary-AI" target="_blank" aria-label="View Mario Evolutionary AI project on GitHub">
+                <img src="mario-evolutionary-ai.png" alt="Mario Evolutionary AI" loading="lazy">
+                <p>Mario Evolutionary AI</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="category-title">Visual Scripting:</div>
+    <div class="programming-section">
+        <div class="programming-item">
+            <a href="https://github.com/WilliamLautama/BugBlitz" target="_blank" aria-label="View Bug Blitz project on GitHub">
+                <img src="bug-blitz.png" alt="Bug Blitz" loading="lazy">
+                <p>Bug Blitz</p>
+            </a>
+        </div>
+        <div class="programming-item">
+            <a href="https://github.com/WilliamLautama/RoboRumble" target="_blank" aria-label="View Robo Rumble project on GitHub">
+                <img src="robo-rumble.png" alt="Robo Rumble" loading="lazy">
+                <p>Robo Rumble</p>
+            </a>
+        </div>
+        <div class="programming-item">
+            <a href="https://github.com/WilliamLautama/Graviton" target="_blank" aria-label="View Graviton project on GitHub">
+                <img src="graviton.png" alt="Graviton" loading="lazy">
+                <p>Graviton</p>
+            </a>
+        </div>
+        <div class="programming-item">
+            <a href="https://github.com/WilliamLautama/PostMortem" target="_blank" aria-label="View post mortem project on GitHub">
+                <img src="post-mortem.png" alt="Post Mortem" loading="lazy">
+                <p>Post Mortem</p>
+            </a>
+        </div>
+    </div>
 </body>
 </html>

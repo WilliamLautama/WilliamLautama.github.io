@@ -3,12 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore William John Lautama's portfolio showcasing programming, game design, 3D modeling, VR & AR, sound design, and academic achievements.">
+    <meta property="og:title" content="William John Lautama Portfolio">
+    <meta property="og:description" content="Discover William's journey in development, including programming, game design, and more.">
+    <meta property="og:image" content="portfolio-preview.png">
+    <meta property="og:url" content="https://your-portfolio-url.com">
     <title>William John Lautama Portfolio</title>
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #000000;
+            background: linear-gradient(135deg, #000000, #1a1a1a);
             color: #ffffff;
             display: flex;
             justify-content: center;
@@ -32,12 +37,12 @@
         }
 
         .header h1 {
-            font-size: 2em;
+            font-size: clamp(1.5em, 2vw, 2em);
             margin: 0;
         }
 
         .header p {
-            font-size: 1em;
+            font-size: clamp(0.8em, 1.5vw, 1em);
             margin: 10px 0 0;
         }
 
@@ -58,6 +63,7 @@
             height: 100%;
             object-fit: cover;
             transition: opacity 0.3s;
+            loading: lazy;
         }
 
         .image-card:hover {
@@ -83,6 +89,10 @@
             transition: opacity 0.3s;
             font-size: 1.5em;
             text-transform: uppercase;
+            text-align: center;
+            padding: 10px;
+            box-sizing: border-box;
+            word-wrap: break-word;
         }
 
         .image-card:hover .overlay {
@@ -104,22 +114,20 @@
             padding: 10px 15px;
             border-radius: 5px;
             font-size: 0.9em;
-            transition: background 0.3s;
+            transition: background 0.3s, box-shadow 0.3s;
         }
 
         .social-links a:hover {
             background: #555;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        a:focus {
+            outline: 2px solid #ffffff;
+            outline-offset: 2px;
         }
 
         @media (max-width: 768px) {
-            .header h1 {
-                font-size: 1.8em;
-            }
-
-            .header p {
-                font-size: 0.9em;
-            }
-
             .image-card {
                 max-width: 200px;
             }
@@ -135,14 +143,6 @@
         }
 
         @media (max-width: 480px) {
-            .header h1 {
-                font-size: 1.5em;
-            }
-
-            .header p {
-                font-size: 0.8em;
-            }
-
             .image-card {
                 max-width: 150px;
             }
@@ -166,23 +166,33 @@
 
     <div class="container">
         <a href="programming.html" class="image-card">
-            <img src="programming.png" alt="Programming">
-            <div class="overlay">Programming</div>
+            <img src="programming.png" alt="Link to programming projects by William Lautama" loading="lazy">
+            <div class="overlay" aria-hidden="true">Programming</div>
         </a>
 
         <a href="game-design.html" class="image-card">
-            <img src="game-design.png" alt="Game Design">
-            <div class="overlay">Game Design</div>
+            <img src="game-design.png" alt="Link to game design projects by William Lautama" loading="lazy">
+            <div class="overlay" aria-hidden="true">Game Design</div>
         </a>
 
         <a href="3d-modelling.html" class="image-card">
-            <img src="3d-modelling.png" alt="3D Modelling & Animation">
-            <div class="overlay">3D Modelling & Animation</div>
+            <img src="3d-modelling.png" alt="Link to 3D modeling and animation projects by William Lautama" loading="lazy">
+            <div class="overlay" aria-hidden="true">3D Modelling & Animation</div>
+        </a>
+
+        <a href="vr-and-ar.html" class="image-card">
+            <img src="vr-and-ar.png" alt="Link to VR and AR projects by William Lautama" loading="lazy">
+            <div class="overlay" aria-hidden="true">VR & AR</div>
         </a>
 
         <a href="sound-design.html" class="image-card">
-            <img src="sound-design.png" alt="Sound Design">
-            <div class="overlay">Sound Design</div>
+            <img src="sound-design.png" alt="Link to sound design projects by William Lautama" loading="lazy">
+            <div class="overlay" aria-hidden="true">Sound Design</div>
+        </a>
+
+        <a href="academic.html" class="image-card">
+            <img src="academic.png" alt="Link to academic achievements by William Lautama" loading="lazy">
+            <div class="overlay" aria-hidden="true">Academic Achievements</div>
         </a>
     </div>
 
