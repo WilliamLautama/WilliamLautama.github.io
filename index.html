@@ -3,154 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Games Programmer Portfolio</title>
+    <title>William John Lautama Portfolio</title>
     <style>
         body {
+            margin: 0;
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #1c1c1c;
-            color: #fff;
+            background-color: #000000;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
         }
-        header {
-            background-color: #333;
-            padding: 20px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-        header p {
-            margin: 5px 0;
-            font-size: 1.2rem;
-        }
+
         .container {
-            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1200px;
         }
-        .section {
-            margin-bottom: 30px;
-        }
-        .section h2 {
-            font-size: 2rem;
-            border-bottom: 2px solid #555;
-            padding-bottom: 10px;
-        }
-        .project {
-            margin: 15px 0;
-        }
-        .project h3 {
-            font-size: 1.5rem;
-            margin-bottom: 5px;
-        }
-        .project p {
-            margin: 5px 0 10px;
-        }
-        .project img {
-            display: block;
-            margin: 10px 0;
-            max-width: 100%;
-            border: 2px solid #555;
-        }
-        footer {
-            background-color: #333;
+
+        .header {
             text-align: center;
-            padding: 10px 0;
-            margin-top: 30px;
+            margin-bottom: 40px;
         }
-        footer p {
+
+        .header h1 {
+            font-size: 2.5em;
             margin: 0;
-            font-size: 1rem;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            margin: 10px 0 0;
+        }
+
+        .image-card {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            overflow: hidden;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .image-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.3s;
+        }
+
+        .image-card:hover {
+            transform: scale(1.05);
+        }
+
+        .image-card:hover img {
+            opacity: 0.8;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 1.5em;
+            text-transform: uppercase;
+        }
+
+        .image-card:hover .overlay {
+            opacity: 1;
+        }
+
+        .social-links {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            color: #ffffff;
+            text-decoration: none;
+            background: #333;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: background 0.3s;
+        }
+
+        .social-links a:hover {
+            background: #555;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Games Programmer Portfolio</h1>
-        <p>Showcasing projects in C++, C#, Java, and Visual Scripting</p>
-    </header>
-
-    <div class="container">
-        <!-- C++ Section -->
-        <div class="section">
-            <h2>C++ Projects</h2>
-            <div class="project">
-                <h3>Teixos</h3>
-                <p>A dynamic city-building simulation game showcasing advanced algorithms.</p>
-                <a href="teixos.html">
-					<img src="images/teixos.jpg" alt="Teixos Project" class="project-image">
-				</a>
-            </div>
-            <div class="project">
-                <h3>Blockout Shooter</h3>
-                <p>An arcade-style shooter featuring retro-inspired graphics and physics.</p>
-                <img src="images/blockout_shooter.jpg" alt="Blockout Shooter Project" class="project-image">
-            </div>
-            <div class="project">
-                <h3>A* Simulation</h3>
-                <p>A visualization of the A* pathfinding algorithm in action.</p>
-                <img src="images/astar_simulation.jpg" alt="A* Simulation Project" class="project-image">
-            </div>
-            <div class="project">
-                <h3>GOAP Simulation</h3>
-                <p>Demonstrates Goal-Oriented Action Planning for AI decision-making.</p>
-                <img src="images/goap_simulation.jpg" alt="GOAP Simulation Project" class="project-image">
-            </div>
-        </div>
-
-        <!-- C# Section -->
-        <div class="section">
-            <h2>C# Projects</h2>
-            <div class="project">
-                <h3>[K]night City</h3>
-                <p>An immersive urban exploration game built in Unity.</p>
-                <img src="images/knight_city.jpg" alt="[K]night City Project" class="project-image">
-            </div>
-            <div class="project">
-                <h3>Cheating Jack</h3>
-                <p>A narrative-driven platformer with dynamic difficulty scaling.</p>
-                <img src="images/cheating_jack.jpg" alt="Cheating Jack Project" class="project-image">
-            </div>
-        </div>
-
-        <!-- Java Section -->
-        <div class="section">
-            <h2>Java Projects</h2>
-            <div class="project">
-                <h3>Elden Thing</h3>
-                <p>A humorous parody of Elden Ring with unique gameplay mechanics.</p>
-                <img src="images/elden_thing.jpg" alt="Elden Thing Project" class="project-image">
-            </div>
-            <div class="project">
-                <h3>Mario Evolutionary AI</h3>
-                <p>An AI-driven simulation showcasing evolutionary algorithms in a Mario-like game.</p>
-                <img src="images/mario_evolutionay_ai.jpg" alt="Mario Evolutionary AI Project" class="project-image">
-            </div>
-        </div>
-
-        <!-- Visual Scripting Section -->
-        <div class="section">
-            <h2>Visual Scripting Projects</h2>
-            <div class="project">
-                <h3>Bug Blitz</h3>
-                <p>A fast-paced action game created with Unreal Engine's Blueprint system.</p>
-                <img src="images/bug_blitz.jpg" alt="Bug Blitz Project" class="project-image">
-            </div>
-            <div class="project">
-                <h3>Robo Rumble</h3>
-                <p>A chaotic robot fighting game built using visual scripting tools.</p>
-                <img src="images/robo_rumble.jpg" alt="Robo Rumble Project" class="project-image">
-            </div>
-            <div class="project">
-                <h3>Post Mortem</h3>
-                <p>A haunting adventure game leveraging Unity's Playmaker plugin.</p>
-                <img src="images/post_mortem.jpg" alt="Post Mortem Project" class="project-image">
-            </div>
-        </div>
+    <div class="header">
+        <h1>Welcome to William John Lautama's Portfolio</h1>
+        <p>Explore what William has to offer in his journey of development!</p>
     </div>
 
-    <footer>
-        <p>&copy; 2024 William John Lautama</p>
-    </footer>
+    <div class="container">
+        <a href="programming.html" class="image-card">
+            <img src="programming.png" alt="Programming">
+            <div class="overlay">Programming</div>
+        </a>
+
+        <a href="game-design.html" class="image-card">
+            <img src="game-design.png" alt="Game Design">
+            <div class="overlay">Game Design</div>
+        </a>
+
+        <a href="3d-modelling.html" class="image-card">
+            <img src="3d-modelling.png" alt="3D Modelling & Animation">
+            <div class="overlay">3D Modelling & Animation</div>
+        </a>
+
+        <a href="sound-design.html" class="image-card">
+            <img src="sound-design.png" alt="Sound Design">
+            <div class="overlay">Sound Design</div>
+        </a>
+    </div>
+
+    <div class="social-links">
+        <a href="https://www.linkedin.com/in/william-john-lautama/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/WilliamLautama" target="_blank">GitHub</a>
+        <a href="https://speed576.itch.io/" target="_blank">Itch.io</a>
+        <a href="https://www.artstation.com/speed576" target="_blank">ArtStation</a>
+        <a href="https://www.youtube.com/@Speed576" target="_blank">YouTube</a>
+    </div>
 </body>
 </html>
