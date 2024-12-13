@@ -8,7 +8,7 @@
     <meta property="og:description" content="Explore A* Pathfinding, Reactive Planning, and Goal Oriented Action Plan (GOAP) algorithms in action.">
     <meta property="og:image" content="goal-oriented-simulation-preview.png">
     <meta property="og:url" content="https://your-website-url.com/goal-oriented-simulation.html">
-    <title>AI Pathfinding and Planning Simulation</title>
+    <title>Goal Oriented Action Plan Simulation</title>
     <style>
         body {
             margin: 60px;
@@ -104,12 +104,12 @@
 </head>
 <body>
     <a href="../programming.html" class="back-button" aria-label="Go back to the home page">&#8592; Back</a>
-    <h1>AI Pathfinding and Planning Simulation</h1>
-    <p>This page showcases the implementation of A* Pathfinding, Reactive Planning Collision Avoidance, and the Goal Oriented Action Plan (GOAP) Algorithm in a simulation environment.</p>
+    <h1>Goal Oriented Action Plan Simulation</h1>
+    <p>This page showcases the implementation of A* Pathfinding, Reactive Planning Collision Avoidance, and the Goal Oriented Action Plan (GOAP) Algorithm in a simulation environment made with C++ in Unreal Engine 5.2. This was made as part of my assignment for Artifical Life, Artifical Intelligence, and Virtual Environments in Monash University</p>
 
     <div class="section">
         <h2>Demonstration Video</h2> <br>
-        <iframe width="100%" height="500px" src="https://www.youtube.com/embed/example-pathfinding-video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="100%" height="500px" src="https://www.youtube.com/embed/8TX0rNPKUqo?si=D22BshSwryqcUwd7" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 
     <div class="section">
@@ -118,21 +118,23 @@
         <div class="feature">
             <h3>A* Pathfinding Algorithm</h3>
             <p>
-                This feature demonstrates the A* pathfinding algorithm in action, showcasing its ability to find the shortest path between two points on a grid.
+                This feature demonstrates the A* pathfinding algorithm in action, showcasing its ability to find the shortest path between two points on a grid fully implemented in C++. ThIs is shown from each ship's start building up a path to its end goal.
             </p>
         </div>
     
         <div class="feature">
             <h3>Reactive Planning Collision Avoidance</h3>
             <p>
-                This feature demonstrates reactive planning for collision avoidance, allowing agents to navigate dynamically around obstacles in the environment.
+                This feature demonstrates reactive planning for collision avoidance, allowing agents to navigate dynamically around other agents to get to the end goal. Each agent replans if there are another ship one node ahead of it before continuing on its path.
             </p>
         </div>
 
         <div class="feature">
             <h3>Goal Oriented Action Plan (GOAP) Algorithm</h3>
             <p>
-                The GOAP algorithm demonstrates how agents can plan their actions dynamically to achieve long-term goals, adjusting their plans based on the environment and current situation.
+                The GOAP algorithm demonstrates how agents can plan their actions dynamically to get as much points as possible. Each ship has a role which are Woodcutter, Stonemason, Farmer, and Builder.
+                Each role collects a specific type of resource faster but only the builder can build buildings. The buildings that I set the builder to build the most are Universities since it gives the most points but when
+                they are not building, they are collecting the resources that are needed.
             </p>
         </div>
     </div>
@@ -140,7 +142,7 @@
     <div class="section">
         <h2>Documentation</h2>
         <p>
-            You can download the full technical design document or view it directly in your browser.
+            You can download the full documentation or view it directly in your browser.
         </p>
         <br>
         <iframe src="goap.pdf" width="100%" height="600px" style="border: none;" title="PDF Viewer">
