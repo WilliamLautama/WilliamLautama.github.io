@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Teixos - A first-person shooter prototype showcasing wall running, reactive materials, black hole projectiles, and simple AI behavior.">
-    <meta property="og:title" content="Teixos - Game Prototype">
-    <meta property="og:description" content="Explore the Teixos prototype, featuring wall running, reactive materials, black hole projectiles, and more!">
-    <meta property="og:image" content="teixos-preview.png">
-    <meta property="og:url" content="https://your-website-url.com/teixos.html">
-    <title>Teixos - Game Prototype</title>
+    <meta name="description" content="Cricket Training Simulation VR, an immersive virtual reality experience to help players hone their cricket skills in a realistic environment.">
+    <meta property="og:title" content="Cricket Training Simulation VR">
+    <meta property="og:description" content="Enhance your cricket skills with immersive VR training that simulates real match situations and personalized coaching.">
+    <meta property="og:image" content="cricket-training-preview.png">
+    <meta property="og:url" content="https://your-website-url.com/cricket-training-vr.html">
+    <title>Cricket Training Simulation VR</title>
     <style>
         body {
             margin: 60px;
@@ -46,54 +46,11 @@
             text-align: left;
         }
 
-        .feature video {
+        .feature img {
             width: 100%;
             max-width: 500px;
             margin-top: 15px;
             border-radius: 10px;
-        }
-
-        /* Wrap the table in a scrollable container */
-        .table-container {
-            overflow-x: auto;
-            margin: 0 auto;
-        }
-
-        /* Table styling */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            background-color: #1a1a1a;
-            font-size: 0.9em;
-        }
-
-        table, th, td {
-            border: 1px solid #444;
-        }
-
-        th, td {
-            padding: 12px;
-            text-align: center;
-        }
-
-        th {
-            background-color: #00aaff;
-            color: #fff;
-        }
-
-        @media (max-width: 600px) {
-            table {
-                font-size: 0.8em;
-            }
-
-            th, td {
-                padding: 6px;
-            }
-
-            th {
-                font-size: 0.9em;
-            }
         }
 
         .back-button {
@@ -121,94 +78,12 @@
 
         @media (max-width: 480px) {
             .back-button {
-                top: 70px;  /* Move the button down to prevent overlapping */
-                left: 20px;
+                top: 70px;
             }
 
             h1 {
-                margin-top: 120px;  /* Further space between the back button and title */
+                margin-top: 120px;
             }
-        }
-
-        /* Thumbnail styling */
-        .clickable-image {
-            width: 100px; /* Adjust thumbnail size */
-            height: auto;
-            margin: 10px;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: transform 0.3s;
-        }
-
-        .clickable-image:hover {
-            transform: scale(1.05);
-        }
-
-        /* Image gallery container */
-        .image-gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        /* Modal styling */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            padding-top: 50px;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            overflow: auto;
-        }
-
-        .modal-content {
-            margin: auto;
-            display: block;
-            max-width: 90%;
-            max-height: 80%;
-            border-radius: 10px;
-        }
-
-        .close {
-            position: absolute;
-            top: 20px;
-            right: 35px;
-            color: #fff;
-            font-size: 40px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: color 0.3s;
-        }
-
-        .close:hover {
-            color: #aaa;
-        }
-
-        /* Responsive modal image */
-        @media (max-width: 600px) {
-            .modal-content {
-                max-width: 95%;
-                max-height: 70%;
-            }
-        }
-
-        .download-button {
-        display: inline-block;
-        background-color: #00aaff;
-        color: #ffffff;
-        padding: 10px 20px;
-        text-decoration: none;
-        border-radius: 5px;
-        font-size: 1em;
-        transition: background-color 0.3s;
-        }
-
-        .download-button:hover {
-            background-color: #0088cc;
         }
 
         @media (max-width: 600px) {
@@ -220,228 +95,20 @@
 </head>
 <body>
     <a href="../programming.html" class="back-button" aria-label="Go back to the home page">&#8592; Back</a>
-    <h1>Teixos</h1>
-    <p>A first-person shooter prototype featuring movement-focused mechanics and technical features made in Unreal Engine 5.1. This was made as part of my assignment for Games Programming 1 in Monash University</p>
-
-    <div class="section">
-        <h2>Demonstration Video</h2> <br>
-        <!-- Replace the video with a YouTube embed -->
-        <iframe width="100%" height="500px" src="https://www.youtube.com/embed/Z9CDajIqPE0?si=MZPfAHUjdJzQ-jA3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
+    <h1>Cricket Training Simulation VR</h1>
+    <p>Welcome to Cricket Training Simulation VR, where you can enhance your cricket skills with a fully immersive virtual reality experience.</p>
 
     <div class="section">
         <h2>Features</h2>
-    
+
         <div class="feature">
-            <h3>Wall Run Mechanic</h3>
+            <h3>Interactable UI Implementation</h3>
             <p>
-                The wall run mechanic is implemented fully through C++ with a smooth connection to the UI wall-running bar. The camera tilts slightly for better gameplay overview. The jump mechanic from the wall run combines player view direction and movement direction.
+                The game offers an intuitive and interactive user interface that seamlessly integrates with the VR experience, allowing you to easily access training options and controls.
             </p>
-            <!-- Replace the video with a YouTube embed -->
-            <iframe width="100%" height="500px" src="https://www.youtube.com/embed/6gtWl7ksWK8?si=xOpCbV1LRU9d8EUy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-    
-        <div class="feature">
-            <h3>Simple UI</h3>
-            <p>
-                The UI is anchored properly to adapt to any display ratio. All elements dynamically update through C++ code.
-            </p>
-            <!-- Replace the video with a YouTube embed -->
-            <iframe width="100%" height="500px" src="https://www.youtube.com/embed/901gss569Do?si=rUiiS44TchMgSJqg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-    
-        <div class="feature">
-            <h3>Stylized Reactive Materials</h3>
-            <p>
-                Materials react dynamically with the player using the MPC Collection Instance feature and C++ in Unreal Engine 5.
-            </p>
-            <!-- Replace the video with a YouTube embed -->
-            <iframe width="100%" height="500px" src="https://www.youtube.com/embed/8pTFr46QERc?si=0GW5KkJELpmVIMg0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-    
-        <div class="feature">
-            <h3>Black Hole Projectile</h3>
-            <p>
-                A black hole projectile, functionality implemented in C++, sucks in nearby objects and creates chaos.
-            </p>
-            <!-- Replace the video with a YouTube embed -->
-            <iframe width="100%" height="500px" src="https://www.youtube.com/embed/8G5-j1fWsT0?si=epLnxjdsBI9EthCq" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-    
-        <div class="feature">
-            <h3>Simple AI Behaviour</h3>
-            <p>
-                The AI uses sight stimuli to detect and shoot at the player. It rotates according to where the player is and shoots at the player using the desired weapon, managed via C++ and a Behaviour Tree
-            </p>
-            <!-- Replace the video with a YouTube embed -->
-            <iframe width="100%" height="500px" src="https://www.youtube.com/embed/C8W7moF_hp8?si=w4kCTxluvX1ZJHEy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <!-- Image 1 -->
+            <img src="image1.jpg" alt="UI Example 1">
         </div>
     </div>
-
-    <div class="section">
-        <h2>Technical Details</h2>
-    
-        <h3>Gameplay Flowchart</h3>
-        <div class="image-gallery">
-            <img src="gameplay-flowchart1.png" alt="Gameplay Flowchart 1" class="clickable-image">
-            <img src="gameplay-flowchart2.png" alt="Gameplay Flowchart 2" class="clickable-image">
-            <img src="gameplay-flowchart3.png" alt="Gameplay Flowchart 3" class="clickable-image">
-        </div>
-    
-        <h3>UML Diagram</h3>
-        <div class="image-gallery">
-            <img src="uml-diagram.png" alt="UML Diagram" class="clickable-image">
-        </div>
-    
-        <h3>Sequence Diagram</h3>
-        <div class="image-gallery">
-            <img src="sequence-diagram.png" alt="Sequence Diagram" class="clickable-image">
-        </div>
-    </div>
-    
-    <!-- Modal for full-size image display -->
-    <div id="image-modal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="modal-image">
-    </div>
-
-    <script>
-        // Get the modal
-        const modal = document.getElementById("image-modal");
-        const modalImg = document.getElementById("modal-image");
-        const images = document.querySelectorAll(".clickable-image");
-        const closeBtn = document.querySelector(".close");
-
-        // Loop through each image to add click event
-        images.forEach(image => {
-            image.onclick = function () {
-                modal.style.display = "block";
-                modalImg.src = this.src;
-            };
-        });
-
-        // Close the modal when clicking on the close button
-        closeBtn.onclick = function () {
-            modal.style.display = "none";
-        };
-
-        // Close the modal when clicking outside the image
-        window.onclick = function (event) {
-            if (event.target === modal) {
-                modal.style.display = "none";
-            }
-        };
-    </script>
-
-    <div class="section">
-        <h2>Controls</h2>
-        <div class="table-container">
-            <table>
-                <tr>
-                    <th>Mapping</th>
-                    <th>Action</th>
-                    <th>Description</th>
-                    <th>Keybind</th>
-                    <th>Modifiers</th>
-                </tr>
-                <tr>
-                    <td>LookMapping</td>
-                    <td>Look Around</td>
-                    <td>Used to move the character’s camera based on mouse cursor</td>
-                    <td>Mouse Movements</td>
-                    <td>Modify ControllerYaw and ControllerPitchInput</td>
-                </tr>
-                <tr>
-                    <td>WalkingMapping</td>
-                    <td>Move Forward</td>
-                    <td>Used to move the character forward</td>
-                    <td>W</td>
-                    <td>Modify ControllerYaw and ControllerPitch input</td>
-                </tr>
-                <tr>
-                    <td>WalkingMapping</td>
-                    <td>Move Backwards</td>
-                    <td>Used to move the character backwards</td>
-                    <td>S</td>
-                    <td>SwizzleAxisValue, Negate</td>
-                </tr>
-                <tr>
-                    <td>WalkingMapping</td>
-                    <td>Move to the Right</td>
-                    <td>Used to move the character to the right</td>
-                    <td>D</td>
-                    <td>Change ActorRightVector</td>
-                </tr>
-                <tr>
-                    <td>WalkingMapping</td>
-                    <td>Move to the Left</td>
-                    <td>Used to move the character to the left</td>
-                    <td>A</td>
-                    <td>Change ActorRightVector, Negative</td>
-                </tr>
-                <tr>
-                    <td>JumpMapping</td>
-                    <td>Jump</td>
-                    <td>Used to make the player jump depending on state (WallRunning or Normal)</td>
-                    <td>SpaceBar</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>SprintMapping</td>
-                    <td>Sprint</td>
-                    <td>Used to make the player walk faster (sprint)</td>
-                    <td>Shift</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>FireMapping</td>
-                    <td>Shoot</td>
-                    <td>Used to shoot projectiles</td>
-                    <td>Left Mouse Button</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>SlowDownTimeMapping</td>
-                    <td>Slow Down Time</td>
-                    <td>Used to slow down time</td>
-                    <td>Q</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>SwitchGun1</td>
-                    <td>Switch to Bouncy Gun</td>
-                    <td>Used to switch to Bouncy Gun when shooting</td>
-                    <td>1</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>SwitchGun2</td>
-                    <td>Switch to Black Hole Gun</td>
-                    <td>Used to switch to Black Hole Gun when shooting</td>
-                    <td>2</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>SwitchGun3</td>
-                    <td>Switch to Dual Gun</td>
-                    <td>Used to switch to Dual Gun when shooting</td>
-                    <td>3</td>
-                    <td></td>
-                </tr>
-            </table>
-        </div>
-    </div>
-
-    <div class="section">
-        <h2>Documentation</h2>
-        <p>
-            You can download the full technical design document or view it directly in your browser.
-        </p>
-        <br>
-        <iframe src="teixos-documentation.pdf" width="100%" height="600px" style="border: none;" title="PDF Viewer">
-            This browser does not support PDFs. Please download the PDF to view it.
-        </iframe>
-    </div>
-
 </body>
 </html>
