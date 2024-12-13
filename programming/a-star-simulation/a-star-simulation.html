@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Blockout Shooter - A third-person shooter prototype showcasing multiplayer networking, third-person wall running, poison trail, and more!">
-    <meta property="og:title" content="Blockout Shooter - Game Prototype">
-    <meta property="og:description" content="Explore the Blockout Shooter prototype, featuring multiplayer, third-person wall running, poison trail, and more!">
-    <meta property="og:image" content="blockout-shooter-preview.png">
-    <meta property="og:url" content="https://your-website-url.com/blockout-shooter.html">
-    <title>Blockout Shooter - Game Prototype</title>
+    <meta name="description" content="A* Pathfinding Simulation showcasing pathfinding and collision avoidance algorithms.">
+    <meta property="og:title" content="A* Pathfinding Simulation">
+    <meta property="og:description" content="Explore the A* Pathfinding Algorithm and Reactive Planning Collision Avoidance in action.">
+    <meta property="og:image" content="astar-simulation-preview.png">
+    <meta property="og:url" content="https://your-website-url.com/astar-simulation.html">
+    <title>A* Pathfinding Simulation</title>
     <style>
         body {
             margin: 0;
@@ -46,52 +46,11 @@
             text-align: left;
         }
 
-        .feature video {
+        .feature iframe {
             width: 100%;
             max-width: 500px;
             margin-top: 15px;
             border-radius: 10px;
-        }
-
-        .table-container {
-            overflow-x: auto;
-            margin: 0 auto;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            background-color: #1a1a1a;
-            font-size: 0.9em;
-        }
-
-        table, th, td {
-            border: 1px solid #444;
-        }
-
-        th, td {
-            padding: 12px;
-            text-align: center;
-        }
-
-        th {
-            background-color: #00aaff;
-            color: #fff;
-        }
-
-        @media (max-width: 600px) {
-            table {
-                font-size: 0.8em;
-            }
-
-            th, td {
-                padding: 6px;
-            }
-
-            th {
-                font-size: 0.9em;
-            }
         }
 
         .back-button {
@@ -127,68 +86,6 @@
             }
         }
 
-        .clickable-image {
-            width: 100px;
-            height: auto;
-            margin: 10px;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: transform 0.3s;
-        }
-
-        .clickable-image:hover {
-            transform: scale(1.05);
-        }
-
-        .image-gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            padding-top: 50px;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            overflow: auto;
-        }
-
-        .modal-content {
-            margin: auto;
-            display: block;
-            max-width: 90%;
-            max-height: 80%;
-            border-radius: 10px;
-        }
-
-        .close {
-            position: absolute;
-            top: 20px;
-            right: 35px;
-            color: #fff;
-            font-size: 40px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: color 0.3s;
-        }
-
-        .close:hover {
-            color: #aaa;
-        }
-
-        @media (max-width: 600px) {
-            .modal-content {
-                max-width: 95%;
-                max-height: 70%;
-            }
-        }
-
         .documentation-button {
             display: inline-block;
             background-color: #00aaff;
@@ -207,90 +104,29 @@
 </head>
 <body>
     <a href="../programming.html" class="back-button" aria-label="Go back to the home page">&#8592; Back</a>
-    <h1>Blockout Shooter</h1>
-    <p>A third-person shooter prototype featuring movement-focused mechanics and technical features made in Unreal Engine 5.2. This was made as part my assignment for Games Programming 2 in Monash University.</p>
+    <h1>A* Pathfinding Simulation</h1>
+    <p>This page showcases the implementation of the A* Pathfinding Algorithm and Reactive Planning Collision Avoidance in a simulation environment.</p>
 
     <div class="section">
         <h2>Demonstration Video</h2> <br>
-        <iframe width="100%" height="500px" src="https://www.youtube.com/embed/Z9CDajIqPE0?si=MZPfAHUjdJzQ-jA3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="100%" height="500px" src="https://www.youtube.com/embed/example-pathfinding-video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 
     <div class="section">
         <h2>Features</h2>
-    
+
         <div class="feature">
-            <h3>Multiplayer Networking Implementation</h3>
+            <h3>A* Pathfinding Algorithm</h3>
             <p>
-                Multiplayer networking is implemented for seamless communication between players over the network.
+                This feature demonstrates the A* pathfinding algorithm in action, showcasing its ability to find the shortest path between two points on a grid.
             </p>
-            <iframe width="100%" height="500px" src="https://www.youtube.com/embed/example" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-    
-        <div class="feature">
-            <h3>Third Person Wall Run Mechanic</h3>
-            <p>
-                The wall run mechanic has been adapted for third-person perspective, offering a dynamic gameplay experience.
-            </p>
-            <iframe width="100%" height="500px" src="https://www.youtube.com/embed/example" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     
         <div class="feature">
-            <h3>Poison Trail</h3>
+            <h3>Reactive Planning Collision Avoidance</h3>
             <p>
-                A poison trail mechanic allows the player to leave a damaging trail behind, harming enemies that come into contact.
+                This feature demonstrates reactive planning for collision avoidance, allowing agents to navigate dynamically around obstacles in the environment.
             </p>
-            <iframe width="100%" height="500px" src="https://www.youtube.com/embed/example" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-
-        <div class="feature">
-            <h3>Balloon Trap</h3>
-            <p>
-                The balloon trap mechanic lets the player attach balloons to enemies, causing them to float and become vulnerable to attacks.
-            </p>
-            <iframe width="100%" height="500px" src="https://www.youtube.com/embed/example" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-
-        <div class="feature">
-            <h3>Chaos Mace</h3>
-            <p>
-                The Chaos Mace is a weapon that creates a massive chaotic area around the player when used, pulling in enemies and objects.
-            </p>
-            <iframe width="100%" height="500px" src="https://www.youtube.com/embed/example" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-
-        <div class="feature">
-            <h3>Hit Particle Effect Implementation</h3>
-            <p>
-                A hit particle effect was implemented to visualize impacts on enemies or objects when hit by the player’s weapon.
-            </p>
-            <iframe width="100%" height="500px" src="https://www.youtube.com/embed/example" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-
-        <div class="feature">
-            <h3>Collision Enabled Particle Effect</h3>
-            <p>
-                Particle effects trigger on collision with objects or enemies, enhancing the visual impact of attacks and gameplay.
-            </p>
-            <iframe width="100%" height="500px" src="https://www.youtube.com/embed/example" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-    </div>
-
-    <div class="section">
-        <h2>Technical Details</h2>
-    
-        <h3>UML Diagrams</h3>
-        <div class="image-gallery">
-            <img src="uml-diagram1.png" alt="UML Diagram 1" class="clickable-image">
-            <img src="uml-diagram2.png" alt="UML Diagram 2" class="clickable-image">
-            <img src="uml-diagram3.png" alt="UML Diagram 3" class="clickable-image">
-            <img src="uml-diagram4.png" alt="UML Diagram 4" class="clickable-image">
-            <img src="uml-diagram5.png" alt="UML Diagram 5" class="clickable-image">
-            <img src="uml-diagram6.png" alt="UML Diagram 6" class="clickable-image">
-        </div>
-
-        <h3>Sequence Diagram</h3>
-        <div class="image-gallery">
-            <img src="sequence-diagram.png" alt="Sequence Diagram" class="clickable-image">
         </div>
     </div>
 
@@ -300,7 +136,7 @@
             You can download the full technical design document or view it directly in your browser.
         </p>
         <br>
-        <iframe src="blockout-shooter-documentation.pdf" width="100%" height="600px" style="border: none;" title="PDF Viewer">
+        <iframe src="teixos-documentation.pdf" width="100%" height="600px" style="border: none;" title="PDF Viewer">
             This browser does not support PDFs. Please download the PDF to view it.
         </iframe>
     </div>
