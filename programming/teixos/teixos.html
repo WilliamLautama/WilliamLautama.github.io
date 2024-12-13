@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Teixos - A first-person shooter prototype showcasing wall running, reactive materials, black hole projectiles, and simple AI behavior.">
+    <meta property="og:title" content="Teixos - Game Prototype">
+    <meta property="og:description" content="Explore the Teixos prototype, featuring wall running, reactive materials, black hole projectiles, and more!">
+    <meta property="og:image" content="teixos-preview.png">
+    <meta property="og:url" content="https://your-website-url.com/teixos.html">
+    <title>Teixos - Game Prototype</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            margin-top: 30px;
+            font-size: 2em;
+            border-bottom: 2px solid #00aaff;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .section {
+            margin: 40px auto;
+            max-width: 1000px;
+            background-color: #2a2a2a;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .feature {
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .feature video {
+            width: 100%;
+            max-width: 500px;
+            margin-top: 15px;
+            border-radius: 10px;
+        }
+
+        /* Wrap the table in a scrollable container */
+        .table-container {
+            overflow-x: auto;
+            margin: 0 auto;
+        }
+
+        /* Table styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #1a1a1a;
+            font-size: 0.9em;
+        }
+
+        table, th, td {
+            border: 1px solid #444;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #00aaff;
+            color: #fff;
+        }
+
+        @media (max-width: 600px) {
+            table {
+                font-size: 0.8em;
+            }
+
+            th, td {
+                padding: 6px;
+            }
+
+            th {
+                font-size: 0.9em;
+            }
+        }
+
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #ffffff;
+            color: #000000;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 1em;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #cccccc;
+        }
+
+        .back-button:focus {
+            outline: 2px solid #ffffff;
+        }
+
+        @media (max-width: 480px) {
+            .back-button {
+                top: 70px;  /* Move the button down to prevent overlapping */
+                left: 20px;
+            }
+
+            h1 {
+                margin-top: 120px;  /* Further space between the back button and title */
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="../programming.html" class="back-button" aria-label="Go back to the home page">&#8592; Back</a>
+    <h1>Teixos</h1>
+    <p>A first-person shooter prototype featuring movement-focused mechanics and technical features made in Unreal Engine 5.1.</p>
+
+    <div class="section">
+        <h2>Demonstration Video</h2> <br>
+        <video controls>
+            <source src="teixos-demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="section">
+        <h2>Features</h2>
+
+        <div class="feature">
+            <h3>Wall Run Mechanic</h3>
+            <p>
+                The wall run mechanic is implemented fully through C++ with a smooth connection to the UI wall-running bar. The camera tilts slightly for better gameplay overview. The jump mechanic from the wall run combines player view direction and movement direction.
+            </p>
+            <video controls>
+                <source src="wall-run.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="feature">
+            <h3>Simple UI</h3>
+            <p>
+                The UI is anchored properly to adapt to any display ratio. All elements dynamically update through C++ code.
+            </p>
+            <video controls>
+                <source src="simple-ui.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="feature">
+            <h3>Stylized Reactive Materials</h3>
+            <p>
+                Materials react dynamically with the player using the MPC Collection Instance feature and C++ in Unreal Engine 5.
+            </p>
+            <video controls>
+                <source src="reactive-materials.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="feature">
+            <h3>Black Hole Projectile</h3>
+            <p>
+                A black hole projectile, functionality implemented in C++, sucks in nearby objects and creates chaos.
+            </p>
+            <video controls>
+                <source src="black-hole.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="feature">
+            <h3>Simple AI Behaviour</h3>
+            <p>
+                The AI uses sight stimuli to detect and shoot at the player. It also patrols randomly when idle, managed via C++ and a Behavior Tree.
+            </p>
+            <video controls>
+                <source src="simple-ai.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Technical Details</h2>
+
+        <h3>Gameplay Flowchart</h3>
+        <img src="gameplay-flowchart1.png" alt="Gameplay Flowchart 1">
+        <img src="gameplay-flowchart2.png" alt="Gameplay Flowchart 2">
+        <img src="gameplay-flowchart3.png" alt="Gameplay Flowchart 3">
+
+        <h3>UML Diagram</h3>
+        <img src="uml-diagram.png" alt="UML Diagram">
+
+        <h3>Sequence Diagram</h3>
+        <img src="sequence-diagram.png" alt="Sequence Diagram">
+    </div>
+
+    <div class="section">
+        <h2>Controls</h2>
+        <div class="table-container">
+            <table>
+                <tr>
+                    <th>Mapping</th>
+                    <th>Action</th>
+                    <th>Description</th>
+                    <th>Keybind</th>
+                    <th>Modifiers</th>
+                </tr>
+                <tr>
+                    <td>LookMapping</td>
+                    <td>Look Around</td>
+                    <td>Used to move the character’s camera based on mouse cursor</td>
+                    <td>Mouse Movements</td>
+                    <td>Modify ControllerYaw and ControllerPitchInput</td>
+                </tr>
+                <tr>
+                    <td>WalkingMapping</td>
+                    <td>Move Forward</td>
+                    <td>Used to move the character forward</td>
+                    <td>W</td>
+                    <td>Modify ControllerYaw and ControllerPitch input</td>
+                </tr>
+                <tr>
+                    <td>WalkingMapping</td>
+                    <td>Move Backwards</td>
+                    <td>Used to move the character backwards</td>
+                    <td>S</td>
+                    <td>SwizzleAxisValue, Negate</td>
+                </tr>
+                <tr>
+                    <td>WalkingMapping</td>
+                    <td>Move to the Right</td>
+                    <td>Used to move the character to the right</td>
+                    <td>D</td>
+                    <td>Change ActorRightVector</td>
+                </tr>
+                <tr>
+                    <td>WalkingMapping</td>
+                    <td>Move to the Left</td>
+                    <td>Used to move the character to the left</td>
+                    <td>A</td>
+                    <td>Change ActorRightVector, Negative</td>
+                </tr>
+                <tr>
+                    <td>JumpMapping</td>
+                    <td>Jump</td>
+                    <td>Used to make the player jump depending on state (WallRunning or Normal)</td>
+                    <td>SpaceBar</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>SprintMapping</td>
+                    <td>Sprint</td>
+                    <td>Used to make the player walk faster (sprint)</td>
+                    <td>Shift</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>FireMapping</td>
+                    <td>Shoot</td>
+                    <td>Used to shoot projectiles</td>
+                    <td>Left Mouse Button</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>SlowDownTimeMapping</td>
+                    <td>Slow Down Time</td>
+                    <td>Used to slow down time</td>
+                    <td>Q</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>SwitchGun1</td>
+                    <td>Switch to Bouncy Gun</td>
+                    <td>Used to switch to Bouncy Gun when shooting</td>
+                    <td>1</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>SwitchGun2</td>
+                    <td>Switch to Black Hole Gun</td>
+                    <td>Used to switch to Black Hole Gun when shooting</td>
+                    <td>2</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>SwitchGun3</td>
+                    <td>Switch to Dual Gun</td>
+                    <td>Used to switch to Dual Gun when shooting</td>
+                    <td>3</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
