@@ -55,6 +55,31 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
+        .programming-item .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 10px;
+            box-sizing: border-box;
+            word-wrap: break-word;
+            opacity: 1; /* Hide overlay by default */
+            transition: opacity 0.3s; /* Smooth fade-in effect */
+        }
+
+        .programming-item:hover .overlay {
+            opacity: 1; /* Show the overlay on hover */
+        }
+
         .programming-item img:hover {
             transform: scale(1.05);
             box-shadow: 0 6px 15px rgba(255, 255, 255, 0.2);
@@ -124,25 +149,25 @@
         <div class="programming-item">
             <a href="teixos/teixos.html">
                 <img src="teixos.png" alt="Teixos" loading="lazy">
-                <p>Teixos</p>
+                <div class="overlay" aria-hidden="true">Teixos</div>
             </a>
         </div>
         <div class="programming-item">
             <a href="blockout-shooter/blockout-shooter.html">
                 <img src="blockout-shooter.png" alt="Blockout Shooter" loading="lazy">
-                <p>Blockout Shooter</p>
+                <div class="overlay" aria-hidden="true">Blockout Shooter</div>
             </a>
         </div>
         <div class="programming-item">
             <a href="a-star-simulation/a-star-simulation.html">
                 <img src="a-star-simulation.png" alt="A Star Simulation" loading="lazy">
-                <p>A* Pathfinding Simulation</p>
+                <div class="overlay" aria-hidden="true">A* Pathfinding Simulation</div>
             </a>
         </div>
         <div class="programming-item">
             <a href="goap-simulation/goap-simulation.html">
                 <img src="goap-simulation.png" alt="Goal Oriented Action Plan Simulation" loading="lazy">
-                <p>Goal Oriented Action Plan Simulation</p>
+                <div class="overlay" aria-hidden="true">Goal Oriented Action Plan Simulation</div>
             </a>
         </div>
     </div>
@@ -152,19 +177,19 @@
         <div class="programming-item">
             <a href="knight-city/knight-city.html">
                 <img src="knight-city.png" alt="Knight City" loading="lazy">
-                <p>[K]night City</p>
+                <div class="overlay" aria-hidden="true">[K]night City</div>
             </a>
         </div>
         <div class="programming-item">
             <a href="cricket-training/cricket-training.html">
                 <img src="crickettraining.png" alt="VR Cricket Training Simulation" loading="lazy">
-                <p>Cricket Training Simulation VR</p>
+                <div class="overlay" aria-hidden="true">Cricket Training Simulation VR</div>
             </a>
         </div>
         <div class="programming-item">
             <a href="cheating-jack/cheating-jack.html">
                 <img src="cheating-jack.png" alt="Cheating Jack" loading="lazy">
-                <p>Cheating Jack</p>
+                <div class="overlay" aria-hidden="true">Cheating Jack</div>
             </a>
         </div>
     </div>
@@ -174,13 +199,13 @@
         <div class="programming-item">
             <a href="elden-thing/elden-thing.html">
                 <img src="elden-thing.png" alt="Elden Thing" loading="lazy">
-                <p>Elden Thing</p>
+                <div class="overlay" aria-hidden="true">Elden Thing</div>
             </a>
         </div>
         <div class="programming-item">
             <a href="mario-evolutionary-ai/mario-evolutionary-ai.html">
                 <img src="mario-evolutionary-ai.png" alt="Mario Evolutionary AI" loading="lazy">
-                <p>Mario Evolutionary AI</p>
+                <div class="overlay" aria-hidden="true">Mario Evolutionary AI</div>
             </a>
         </div>
     </div>
@@ -190,25 +215,25 @@
         <div class="programming-item">
             <a href="bug-blitz.html">
                 <img src="bug-blitz.png" alt="Bug Blitz" loading="lazy">
-                <p>Bug Blitz</p>
+                <div class="overlay" aria-hidden="true">Bug Blitz</div>
             </a>
         </div>
         <div class="programming-item">
             <a href="robo-rumble/robo-rumble.html">
                 <img src="robo-rumble.png" alt="Robo Rumble" loading="lazy">
-                <p>Robo Rumble</p>
+                <div class="overlay" aria-hidden="true">Robo Rumble</div>
             </a>
         </div>
         <div class="programming-item">
             <a href="graviton/graviton.html">
                 <img src="graviton.png" alt="Graviton" loading="lazy">
-                <p>Graviton</p>
+                <div class="overlay" aria-hidden="true">Graviton</div>
             </a>
         </div>
         <div class="programming-item">
             <a href="post-mortem.html">
                 <img src="post-mortem.png" alt="Post Mortem" loading="lazy">
-                <p>Post Mortem</p>
+                <div class="overlay" aria-hidden="true">Post Mortem</div>
             </a>
         </div>
     </div>

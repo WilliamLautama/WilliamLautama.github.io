@@ -85,14 +85,13 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            opacity: 0;
-            transition: opacity 0.3s;
-            font-size: 1.5em;
+            font-size: 1.2em;
             text-transform: uppercase;
             text-align: center;
             padding: 10px;
             box-sizing: border-box;
             word-wrap: break-word;
+            opacity: 1; /* Always visible */
         }
 
         .image-card:hover .overlay {
@@ -156,6 +155,15 @@
                 padding: 6px 10px;
             }
         }
+
+        .caption {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 1em;
+            color: #ffffff;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -168,36 +176,43 @@
         <a href="programming/programming.html" class="image-card">
             <img src="landing-page-pictures/programming.png" alt="Link to programming projects by William Lautama" loading="lazy">
             <div class="overlay" aria-hidden="true">Programming</div>
+            <div class="caption">Programming</div>
         </a>
-
+    
         <a href="game-design/game-design.html" class="image-card">
             <img src="landing-page-pictures/game-design.png" alt="Link to game design projects by William Lautama" loading="lazy">
             <div class="overlay" aria-hidden="true">Game Design</div>
+            <div class="caption">Game Design</div>
         </a>
-
+    
         <a href="3d-modeling-&-animation/3d-modeling-&-animation.html" class="image-card">
             <img src="landing-page-pictures/3d-modeling.png" alt="Link to 3D modeling and animation projects by William Lautama" loading="lazy">
             <div class="overlay" aria-hidden="true">3D Modeling & Animation</div>
+            <div class="caption">3D Modeling & Animation</div>
         </a>
-
+    
         <a href="vr-&-ar/vr-&-ar.html" class="image-card">
             <img src="landing-page-pictures/vr-and-ar.png" alt="Link to VR and AR projects by William Lautama" loading="lazy">
             <div class="overlay" aria-hidden="true">VR & AR</div>
+            <div class="caption">VR & AR</div>
         </a>
-
+    
         <a href="sound-design/sound-design.html" class="image-card">
             <img src="landing-page-pictures/sound-design.png" alt="Link to sound design projects by William Lautama" loading="lazy">
             <div class="overlay" aria-hidden="true">Sound Design</div>
+            <div class="caption">Sound Design</div>
         </a>
-
+    
         <a href="technical-art/technical-art.html" class="image-card">
             <img src="landing-page-pictures/technical-art.png" alt="Link to technical art projects by William Lautama" loading="lazy">
             <div class="overlay" aria-hidden="true">Technical Art</div>
+            <div class="caption">Technical Art</div>
         </a>
-
+    
         <a href="academic/academic.html" class="image-card">
             <img src="landing-page-pictures/academic.png" alt="Link to academic achievements by William Lautama" loading="lazy">
             <div class="overlay" aria-hidden="true">Academic Achievements</div>
+            <div class="caption">Academic Achievements</div>
         </a>
     </div>
 
