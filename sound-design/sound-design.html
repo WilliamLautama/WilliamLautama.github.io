@@ -41,6 +41,10 @@
         .portfolio-item {
             position: relative;
             text-align: center;
+            overflow: hidden;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .portfolio-item img {
@@ -48,16 +52,40 @@
             max-width: 250px;
             height: auto;
             aspect-ratio: 1;
-            overflow: hidden;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
+            object-fit: cover;
+            transition: transform 0.3s, opacity 0.3s;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
-        .portfolio-item img:hover {
+        .portfolio-item:hover img {
             transform: scale(1.05);
             box-shadow: 0 6px 15px rgba(255, 255, 255, 0.2);
+            opacity: 0.8;
+        }
+
+        .portfolio-item .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 10px;
+            box-sizing: border-box;
+            word-wrap: break-word;
+            opacity: 1;
+            transition: opacity 0.3s;
+        }
+
+        .portfolio-item:hover .overlay {
+            opacity: 1;
         }
 
         .portfolio-item p {
@@ -114,19 +142,19 @@
         <div class="portfolio-item">
             <a href="ominous-sewers.html">
                 <img src="ominous-sewers.png" alt="Ominous Sewers Soundscape" loading="lazy">
-                <p>Ominous Sewers Soundscape</p>
+                <div class="overlay" aria-hidden="true">Ominous Sewers Soundscape</div>
             </a>
         </div>
         <div class="portfolio-item">
             <a href="panicked-horror-waters.html">
                 <img src="panicked-horror-waters.png" alt="Panicked Horror Waters" loading="lazy">
-                <p>Panicked Horror Waters</p>
+                <div class="overlay" aria-hidden="true">Panicked Horror Waters</div>
             </a>
         </div>
         <div class="portfolio-item">
             <a href="garden-of-souls.html">
                 <img src="garden-of-souls.png" alt="Garden of Souls" loading="lazy">
-                <p>Garden of Souls</p>
+                <div class="overlay" aria-hidden="true">Garden of Souls</div>
             </a>
         </div>
     </div>

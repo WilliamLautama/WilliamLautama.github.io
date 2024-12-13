@@ -41,6 +41,10 @@
         .portfolio-item {
             position: relative;
             text-align: center;
+            overflow: hidden;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .portfolio-item img {
@@ -48,16 +52,40 @@
             max-width: 250px;
             height: auto;
             aspect-ratio: 1;
-            overflow: hidden;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
+            object-fit: cover;
+            transition: transform 0.3s, opacity 0.3s;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
 
-        .portfolio-item img:hover {
+        .portfolio-item:hover img {
             transform: scale(1.05);
             box-shadow: 0 6px 15px rgba(255, 255, 255, 0.2);
+            opacity: 0.8;
+        }
+
+        .portfolio-item .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 10px;
+            box-sizing: border-box;
+            word-wrap: break-word;
+            opacity: 1;
+            transition: opacity 0.3s;
+        }
+
+        .portfolio-item:hover .overlay {
+            opacity: 1;
         }
 
         .portfolio-item p {
@@ -114,25 +142,25 @@
         <div class="portfolio-item">
             <a href="vr/space-crash.html">
                 <img src="vr-space-crash.png" alt="Space Crash VR" loading="lazy">
-                <p>Space Crash VR</p>
+                <div class="overlay" aria-hidden="true">Space Crash VR</div>
             </a>
         </div>
         <div class="portfolio-item">
             <a href="vr/memory-lane-trauma.html">
                 <img src="vr-memory-lane-trauma.png" alt="Memory Lane Trauma VR" loading="lazy">
-                <p>Memory Lane Trauma VR</p>
+                <div class="overlay" aria-hidden="true">Memory Lane Trauma VR</div>
             </a>
         </div>
         <div class="portfolio-item">
             <a href="vr/cricket-training-simulation.html">
                 <img src="vr-cricket-training-simulation.png" alt="Cricket Training Simulation VR" loading="lazy">
-                <p>Cricket Training Simulation VR</p>
+                <div class="overlay" aria-hidden="true">Cricket Training Simulation VR</div>
             </a>
         </div>
         <div class="portfolio-item">
             <a href="ar/liminal-hand-mouth.html">
                 <img src="ar-liminal-hand-mouth.png" alt="Liminal Hand Mouth AR" loading="lazy">
-                <p>Liminal Hand Mouth AR</p>
+                <div class="overlay" aria-hidden="true">Liminal Hand Mouth AR</div>
             </a>
         </div>
     </div>
