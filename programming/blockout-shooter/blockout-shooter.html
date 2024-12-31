@@ -41,9 +41,75 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
         }
 
+        .clickable-image {
+            width: 100px;
+            height: auto;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+
+        .clickable-image:hover {
+            transform: scale(1.05);
+        }
+
         .feature {
             margin-bottom: 30px;
             text-align: left;
+        }
+
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+            animation: zoomIn 0.3s ease;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .close:hover {
+            color: #aaa;
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
         }
 
         .feature video {
@@ -213,7 +279,7 @@
 
     <div class="section">
         <h2>Demonstration Video</h2> <br>
-        <iframe width="100%" height="500px" src="https://www.youtube.com/embed/Z9CDajIqPE0?si=MZPfAHUjdJzQ-jA3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="100%" height="500px" src="https://www.youtube.com/embed/lFk6OHith1g?si=Xabj4su-UtHgR_Vy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 
     <div class="section">
@@ -222,9 +288,9 @@
         <div class="feature">
             <h3>Multiplayer Networking Implementation</h3>
             <p>
-                Multiplayer networking is implemented for seamless communication between players over the network.
+                Multiplayer networking is implemented with C++ for seamless communication between players over the network using Server RPCs using Listen Server.
             </p>
-            <iframe width="100%" height="500px" src="https://www.youtube.com/embed/example" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="100%" height="500px" src="https://www.youtube.com/embed/JJW7DYNBBJg?si=39H1rw8h3DOm-Z0A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     
         <div class="feature">
@@ -232,7 +298,7 @@
             <p>
                 The wall run mechanic has been adapted for third-person perspective, offering a dynamic gameplay experience.
             </p>
-            <iframe width="100%" height="500px" src="https://www.youtube.com/embed/example" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="100%" height="500px" src="https://www.youtube.com/embed/R8sWm6rBRoU?si=-rvUPfXmmz-Zr3hu" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     
         <div class="feature">
@@ -240,39 +306,39 @@
             <p>
                 A poison trail mechanic allows the player to leave a damaging trail behind, harming enemies that come into contact.
             </p>
-            <iframe width="100%" height="500px" src="https://www.youtube.com/embed/example" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="100%" height="500px" src="https://www.youtube.com/embed/HYqbXYs_FSU?si=NHPNAm1dufcG0uvv" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
 
         <div class="feature">
             <h3>Balloon Trap</h3>
             <p>
-                The balloon trap mechanic lets the player attach balloons to enemies, causing them to float and become vulnerable to attacks.
+                The balloon trap mechanic lets the player attach balloons to specific boxes, causing them to become traps when flown high enough and hitting enemies.
             </p>
-            <iframe width="100%" height="500px" src="https://www.youtube.com/embed/example" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="100%" height="500px" src="https://www.youtube.com/embed/biR7IwLkfwA?si=lu88--r6mB-82Typ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
 
         <div class="feature">
             <h3>Chaos Mace</h3>
             <p>
-                The Chaos Mace is a weapon that creates a massive chaotic area around the player when used, pulling in enemies and objects.
+                The Chaos Mace is a weapon that creates a chaotic mace that goes everywhere when activated. The player will not receive damage from it but anyone who touches it will get damaged.
             </p>
-            <iframe width="100%" height="500px" src="https://www.youtube.com/embed/example" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="100%" height="500px" src="https://www.youtube.com/embed/W-4sad6Kyc4?si=8EnOWzgg9IqIdfWB" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
 
         <div class="feature">
             <h3>Hit Particle Effect Implementation</h3>
             <p>
-                A hit particle effect was implemented to visualize impacts on enemies or objects when hit by the player’s weapon.
+                A hit particle effect was implemented to visualize the number of damage that the enemy / player got hit by.
             </p>
-            <iframe width="100%" height="500px" src="https://www.youtube.com/embed/example" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="100%" height="500px" src="https://www.youtube.com/embed/R7gGxvHgcW4?si=fdepeBSVQAdN6-Kd" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
 
         <div class="feature">
             <h3>Collision Enabled Particle Effect</h3>
             <p>
-                Particle effects trigger on collision with objects or enemies, enhancing the visual impact of attacks and gameplay.
+                Particle effects trigger on collision with walls, creating a visual difference when touching each other triggered through C++.
             </p>
-            <iframe width="100%" height="500px" src="https://www.youtube.com/embed/example" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="100%" height="500px" src="https://www.youtube.com/embed/3lvMdEGb2gA?si=cP8oHfC7ogQ7I06q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
 
@@ -295,13 +361,46 @@
         </div>
     </div>
 
+    <!-- Modal Structure -->
+    <div class="modal" id="image-modal">
+        <span class="close" id="close-modal">&times;</span>
+        <img class="modal-content" id="modal-img">
+    </div>
+
+    <script>
+        // JavaScript for Modal Functionality
+        document.addEventListener("DOMContentLoaded", function () {
+            const images = document.querySelectorAll(".clickable-image");
+            const modal = document.getElementById("image-modal");
+            const modalImg = document.getElementById("modal-img");
+            const closeModal = document.getElementById("close-modal");
+
+            images.forEach(img => {
+                img.addEventListener("click", function () {
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                });
+            });
+
+            closeModal.addEventListener("click", function () {
+                modal.style.display = "none";
+            });
+
+            modal.addEventListener("click", function (e) {
+                if (e.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
+        });
+    </script>
+
     <div class="section">
         <h2>Documentation</h2>
         <p>
             You can download the full technical design document or view it directly in your browser.
         </p>
         <br>
-        <iframe src="blockout-shooter-documentation.pdf" width="100%" height="600px" style="border: none;" title="PDF Viewer">
+        <iframe src="BlockoutShooter - TDD.pdf" width="100%" height="600px" style="border: none;" title="PDF Viewer">
             This browser does not support PDFs. Please download the PDF to view it.
         </iframe>
     </div>
