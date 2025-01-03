@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mechanics Design - Explore detailed mechanics crafted for various projects.">
+    <meta property="og:title" content="Mechanics Design - Projects">
+    <meta property="og:description" content="A showcase of game mechanics developed for Bug Blitz, Robo Rumble, [K]night City, Cheating Jack, Graviton, and Parasymbiosis.">
+    <meta property="og:image" content="mechanics-design-preview.png">
+    <meta property="og:url" content="https://your-website-url.com/mechanics-design.html">
+    <title>Mechanics Design</title>
+    <style>
+        body {
+            margin: 60px;
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            margin-top: 30px;
+            font-size: 2em;
+            border-bottom: 2px solid #00aaff;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .section {
+            margin: 40px auto;
+            max-width: 1000px;
+            background-color: #2a2a2a;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .project {
+            margin-bottom: 30px;
+        }
+
+        .project img {
+            width: 200px; /* Adjust width to make images smaller */
+            height: 150px; /* Set a consistent height */
+            object-fit: cover; /* Ensure images maintain aspect ratio */
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+            cursor: pointer;
+            margin: 10px; /* Add space between images */
+        }
+
+        .project img:hover {
+            transform: scale(1.05);
+        }
+
+        .project h3 {
+            margin-top: 10px;
+            font-size: 1.5em;
+        }
+
+        .project p {
+            margin-top: 5px;
+            font-size: 1.2em;
+        }
+
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .project img {
+                width: 150px; /* Make images even smaller on smaller screens */
+                height: 120px;
+            }
+        }
+
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #ffffff;
+            color: #000000;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 1em;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #cccccc;
+        }
+
+        .back-button:focus {
+            outline: 2px solid #ffffff;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            overflow: auto;
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 80%;
+            border-radius: 10px;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .close:hover {
+            color: #aaa;
+        }
+
+    </style>
+</head>
+<body>
+    <a href="../game-design.html" class="back-button" aria-label="Go back to the projects page">&larr; Back</a>
+    <h1>Mechanics Design</h1>
+    <p>Explore the unique mechanics and designs created for various game projects.</p>
+
+    <!-- Mechanics Design Section -->
+    <div class="section">
+        <!-- Bug Blitz Project -->
+        <h2>Bug Blitz</h2>
+        <div class="project">
+            <p> Bug Blitz features complex movement mechanics and simple AI that adds unique challenges to the experience.</p>
+            
+            <iframe width="100%" height="500px" src="https://www.youtube.com/embed/mElTxuitB_E?si=2bd5LPItT9Wa9v0F" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <p> You can view the documentation of each mechanics in this pdf file. </p>
+            <iframe src="bugblitz.pdf" width="100%" height="600px" style="border: none;" title="PDF Viewer">
+                This browser does not support PDFs. Please download the PDF to view it.
+            </iframe>
+        </div>
+
+        <!-- Robo Rumble Project 
+        <h2>Robo Rumble</h2>
+        <div class="project">
+            <img src="robo-rumble1.jpg" alt="Robo Rumble Level Design" class="clickable-image">
+            <img src="robo-rumble2.jpg" alt="Robo Rumble Arena" class="clickable-image">
+            <img src="robo-rumble3.jpg" alt="Robo Rumble Combat" class="clickable-image">
+            <p> Robo Rumble features fast-paced combat mechanics with customizable robots, offering a unique level of player control and strategy.</p>
+        </div> -->
+
+        <!-- [K]night City Project -->
+        <h2>[K]night City</h2>
+        <div class="project">
+            <img src="knight1.png" alt="[K]night City 1" class="clickable-image">
+            <img src="knight2.png" alt="[K]night City 2" class="clickable-image">
+            <p> [K]night City introduces stealth mechanics and a dynamic night-and-day cycle, where each level has hidden secrets and combat sequences.</p>
+        </div>
+
+        <!-- Cheating Jack Project -->
+        <h2>Cheating Jack</h2>
+        <div class="project">
+            <img src="cheatingjack1.png" alt="Cheating Jack 1" class="clickable-image">
+            <img src="cheatingjack2.png" alt="Cheating Jack 2" class="clickable-image">
+            <p> Cheating Jack employs card-based mechanics where players must use strategy and deception to outwit opponents in an evolving puzzle environment.</p>
+        </div>
+
+        <!-- Graviton Project -->
+        <h2>Graviton</h2>
+        <div class="project">
+            <img src="graviton1.png" alt="Graviton 1" class="clickable-image">
+            <img src="graviton2.png" alt="Graviton 2" class="clickable-image">
+            <p> Graviton uses gravity manipulation mechanics to craft intricate puzzles that challenge players to think in multiple dimensions.</p>
+        </div>
+
+        <!-- Parasymbiosis Project -->
+        <h2>Parasymbiosis</h2>
+        <div class="project">
+            <img src="parasymbiosis1.png" alt="Parasymbiosis 1" class="clickable-image">
+            <img src="parasymbiosis2.png" alt="Parasymbiosis 2" class="clickable-image">
+            <p> Parasymbiosis combines platforming and action elements where the player controls a character fused with a parasite, offering new abilities and mechanics.</p>
+        </div>
+    </div>
+
+    <!-- Modal for full-size image display -->
+    <div id="image-modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-image">
+    </div>
+
+    <script>
+        // Get the modal
+        const modal = document.getElementById("image-modal");
+        const modalImg = document.getElementById("modal-image");
+        const images = document.querySelectorAll(".clickable-image");
+        const closeBtn = document.querySelector(".close");
+
+        // Loop through each image to add click event
+        images.forEach(image => {
+            image.onclick = function () {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            };
+        });
+
+        // Close the modal when clicking on the close button
+        closeBtn.onclick = function () {
+            modal.style.display = "none";
+        };
+
+        // Close the modal when clicking outside the image
+        window.onclick = function (event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        };
+    </script>
+</body>
+</html>

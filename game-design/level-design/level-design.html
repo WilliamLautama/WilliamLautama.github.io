@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Level Design - Explore detailed designs crafted for various projects.">
+    <meta property="og:title" content="Level Design - Projects">
+    <meta property="og:description" content="A showcase of level designs developed for Robo Rumble, [K]night City, Graviton, Winter Ember, and Parasymbiosis.">
+    <meta property="og:image" content="level-design-preview.png">
+    <meta property="og:url" content="https://your-website-url.com/level-design.html">
+    <title>Level Design</title>
+    <style>
+        body {
+            margin: 60px;
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            margin-top: 30px;
+            font-size: 2em;
+            border-bottom: 2px solid #00aaff;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .section {
+            margin: 40px auto;
+            max-width: 1000px;
+            background-color: #2a2a2a;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .project {
+            margin-bottom: 30px;
+        }
+
+        .project img {
+            width: 200px; /* Adjust width to make images smaller */
+            height: 150px; /* Set a consistent height */
+            object-fit: cover; /* Ensure images maintain aspect ratio */
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+            cursor: pointer;
+            margin: 10px; /* Add space between images */
+        }
+
+        .project img:hover {
+            transform: scale(1.05);
+        }
+
+        .project h3 {
+            margin-top: 10px;
+            font-size: 1.5em;
+        }
+
+        .project p {
+            margin-top: 5px;
+            font-size: 1.2em;
+        }
+
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .project img {
+                width: 150px; /* Make images even smaller on smaller screens */
+                height: 120px;
+            }
+        }
+
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #ffffff;
+            color: #000000;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 1em;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #cccccc;
+        }
+
+        .back-button:focus {
+            outline: 2px solid #ffffff;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            overflow: auto;
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 80%;
+            border-radius: 10px;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .close:hover {
+            color: #aaa;
+        }
+
+    </style>
+</head>
+<body>
+    <a href="../game-design.html" class="back-button" aria-label="Go back to the projects page">&larr; Back</a>
+    <h1>Level Design</h1>
+    <p> On some of the games I made, I designed the levels whether its for the game itself or for future levels. </p>
+
+    <!-- Level Design Section -->
+    <div class="section">
+        <!-- Robo Rumble Project 
+        <h2>Robo Rumble</h2>
+        <div class="project">
+            <img src="robo-rumble1.jpg" alt="Robo Rumble Level Design" class="clickable-image">
+            <img src="robo-rumble2.jpg" alt="Robo Rumble Arena" class="clickable-image">
+            <img src="robo-rumble3.jpg" alt="Robo Rumble Combat" class="clickable-image">
+            <img src="robo-rumble4.jpg" alt="Robo Rumble Robot Design" class="clickable-image">
+            <img src="robo-rumble5.jpg" alt="Robo Rumble Movement" class="clickable-image">
+            <p>An arena-style level emphasizing fast-paced combat and strategic movement.</p>
+        </div> -->
+        
+        <!-- [K]night City Project -->
+        <h2>[K]night City</h2>
+        <div class="project">
+            <img src="knight1.png" alt="[K]night City 1" class="clickable-image">
+            <img src="knight2.png" alt="[K]night City 2" class="clickable-image">
+            <img src="knight3.png" alt="[K]night City 3" class="clickable-image">
+            <img src="knight4.png" alt="[K]night City 4" class="clickable-image">
+            <img src="knight5.png" alt="[K]night City 5" class="clickable-image">
+            <p> [K]night City currently have 5 distinct levels with each level having a secret coin for the player to collect. Each level also have specific enemy placements and also a boss fight at the 5th level.</p>
+        </div>
+        
+        <!-- Graviton Project -->
+        <h2>Graviton</h2>
+        <div class="project">
+            <img src="graviton1.png" alt="Graviton 1" class="clickable-image">
+            <img src="graviton2.png" alt="Graviton 2" class="clickable-image">
+            <img src="graviton3.png" alt="Graviton 3" class="clickable-image">
+            <img src="graviton4.png" alt="Graviton 4" class="clickable-image">
+            <p> Gravity defying puzzles that challenges the player to think outside the box to finish the level faster each time which was made in under 3 days. Level 1 is an introductory level while Level 2 introduces more complex elements. Level 3 utilizes the gravity component by making it a vertical maze. </p>
+        </div>
+        
+        <!-- Winter Ember Project -->
+        <h2>Winter Ember</h2>
+        <div class="project">
+            <img src="winter1.png" alt="Winter Ember 1" class="clickable-image">
+            <img src="winter2.png" alt="Winter Ember 2" class="clickable-image">
+            <img src="winter3.png" alt="Winter Ember 3" class="clickable-image">
+            <p> Winter Ember has a puzzle like platformer levels which challenges the player to use all of the abilities as much as they can to get to the goal. Here is the early documentation of the level design. </p>
+            <iframe src="winterember.pdf" width="100%" height="600px" style="border: none;" title="PDF Viewer">
+                This browser does not support PDFs. Please download the PDF to view it.
+            </iframe>
+        </div>
+        
+        <!-- Parasymbiosis Project -->
+        <h2>Parasymbiosis</h2>
+        <div class="project">
+            <!-- PDF Link for Parasymbiosis -->
+            <p> Paraymsbiosis is an action platformer game featuring a player with a parasite going through enemies. Here is the level design for the game that can be possibly made in the future : </p>
+            <iframe src="parasymbiosis.pdf" width="100%" height="600px" style="border: none;" title="PDF Viewer">
+                This browser does not support PDFs. Please download the PDF to view it.
+            </iframe>
+        </div>
+    </div>
+
+    <!-- Modal for full-size image display -->
+    <div id="image-modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-image">
+    </div>
+
+    <script>
+        // Get the modal
+        const modal = document.getElementById("image-modal");
+        const modalImg = document.getElementById("modal-image");
+        const images = document.querySelectorAll(".clickable-image");
+        const closeBtn = document.querySelector(".close");
+
+        // Loop through each image to add click event
+        images.forEach(image => {
+            image.onclick = function () {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            };
+        });
+
+        // Close the modal when clicking on the close button
+        closeBtn.onclick = function () {
+            modal.style.display = "none";
+        };
+
+        // Close the modal when clicking outside the image
+        window.onclick = function (event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        };
+    </script>
+</body>
+</html>
