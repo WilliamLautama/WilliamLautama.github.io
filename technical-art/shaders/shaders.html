@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shaders & Materials - Explore various shader and material designs.">
+    <meta property="og:title" content="Shaders & Materials">
+    <meta property="og:description" content="Discover a collection of shaders and materials, including NoiseFlow, Water, Glowy, Ground, Stylized Water, and Glitcher.">
+    <meta property="og:image" content="shaders-preview.png">
+    <meta property="og:url" content="https://your-website-url.com/shaders-materials.html">
+    <title>Shaders & Materials</title>
+    <style>
+        body {
+            margin: 60px;
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            margin-top: 30px;
+            font-size: 2em;
+            border-bottom: 2px solid #00aaff;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .section {
+            margin: 40px auto;
+            max-width: 1000px;
+            background-color: #2a2a2a;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        iframe {
+            width: 100%;
+            height: 500px;
+            margin-top: 20px;
+            border-radius: 10px;
+            border: none;
+        }
+
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .screenshot {
+            width: 250px;
+            height: auto;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+
+        .screenshot:hover {
+            transform: scale(1.05);
+        }
+
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #ffffff;
+            color: #000000;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 1em;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #cccccc;
+        }
+
+        .back-button:focus {
+            outline: 2px solid #ffffff;
+        }
+
+        @media (max-width: 480px) {
+            .back-button {
+                top: 70px;
+            }
+
+            h1 {
+                margin-top: 120px;
+            }
+
+            .screenshot {
+                width: 100%;
+            }
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            overflow: auto;
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 80%;
+            border-radius: 10px;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .close:hover {
+            color: #aaa;
+        }
+
+        @media (max-width: 600px) {
+            .modal-content {
+                max-width: 95%;
+                max-height: 70%;
+            }
+
+            .screenshot {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="../technical-art.html" class="back-button" aria-label="Go back to the home page">&#8592; Back</a>
+    <h1>Shaders & Materials</h1>
+    <p> These are the complex shaders & materials that I have created throughout my development journey. </p>
+
+    <!-- Modal for full-size image display -->
+    <div id="image-modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-image">
+    </div>
+
+    <!-- NoiseFlow Section -->
+    <div class="section">
+        <h2>Noise Flow</h2>
+        <p>A shader that is activated when the player is close to a wall. It uses the noise node, creating a flowy pattern with 2 colours for layering. </p>
+        <div class="image-gallery">
+            <img src="noiseflow1.png" alt="NoiseFlow Screenshot 1" class="screenshot">
+            <img src="noiseflow2.png" alt="NoiseFlow Screenshot 2" class="screenshot">
+            <img src="noiseflow3.png" alt="NoiseFlow Screenshot 3" class="screenshot">
+        </div>
+        <iframe src="https://www.youtube.com/embed/2762QvWBYGM?si=Wb9It5uwW9Hs9bL2" allowfullscreen></iframe>
+    </div>
+
+    <!-- Water Section -->
+    <div class="section">
+        <h2>Semi Realistic Water</h2>
+        <p> A semi realistic water shader following properties of actual water with ripples, movements, etc. </p>
+        <div class="image-gallery">
+            <img src="water1.png" alt="Water Screenshot 1" class="screenshot">
+            <img src="water2.png" alt="Water Screenshot 2" class="screenshot">
+            <img src="water3.png" alt="Water Screenshot 3" class="screenshot">
+        </div>
+        <iframe src="https://www.youtube.com/embed/aHvZ3VnLsWA?si=XX6zREm6yqTSCpZr" allowfullscreen></iframe>
+    </div>
+
+    <!-- Glowy Section -->
+    <div class="section">
+        <h2>Invinsible Glowy</h2>
+        <p> A shader that starts invinsible but then emit a radiant, glowing effect when a player is on top or close to it. </p>
+        <div class="image-gallery">
+            <img src="glowy1.png" alt="Glowy Screenshot 1" class="screenshot">
+            <img src="glowy2.png" alt="Glowy Screenshot 2" class="screenshot">
+            <img src="glowy3.png" alt="Glowy Screenshot 3" class="screenshot">
+        </div>
+        <iframe src="https://www.youtube.com/embed/7h_sLaLEeq8?si=OZNR632oXL_Ztmzm" allowfullscreen></iframe>
+    </div>
+
+    <!-- Ground Section -->
+    <div class="section">
+        <h2>Invinsible Snow</h2>
+        <p> The opposite of the invinsible glowy where the shader starts off as a snowy shader but then when the player is close to it, it becomes invinsible. </p>
+        <div class="image-gallery">
+            <img src="snow1.png" alt="Ground Screenshot 1" class="screenshot">
+            <img src="snow2.png" alt="Ground Screenshot 2" class="screenshot">
+            <img src="snow3.png" alt="Ground Screenshot 3" class="screenshot">
+        </div>
+        <iframe src="https://www.youtube.com/embed/auhuSQNkmVk?si=zQbvj5ZsaTe8pMGe" allowfullscreen></iframe>
+    </div>
+
+    <!-- Stylized Water Section -->
+    <div class="section">
+        <h2>Stylized Water</h2>
+        <p> A cartoonish, stylized water shader that is available in 3 colours which are blue, black, and orange.</p>
+        <div class="image-gallery">
+            <img src="stylizedwater1.png" alt="Stylized Water Screenshot 1" class="screenshot">
+            <img src="stylizedwater2.png" alt="Stylized Water Screenshot 2" class="screenshot">
+            <img src="stylizedwater3.png" alt="Stylized Water Screenshot 3" class="screenshot">
+        </div>
+        <iframe src="https://www.youtube.com/embed/TJc7aTGEJZg?si=abk_30pxEw2BylRr" allowfullscreen></iframe>
+    </div>
+
+    <!-- Glitcher Section -->
+    <div class="section">
+        <h2>Glitcher</h2>
+        <p>A shader that creates a glitching effect for circular objects. Used as a Chaos Mace for my Blockout Shooter prototype and an anomaly for my Graviton game jam submission.</p>
+        <div class="image-gallery">
+            <img src="glitcher1.png" alt="Glitcher Screenshot 1" class="screenshot">
+            <img src="glitcher2.png" alt="Glitcher Screenshot 2" class="screenshot">
+            <img src="glitcher3.png" alt="Glitcher Screenshot 3" class="screenshot">
+        </div>
+        <iframe src="https://www.youtube.com/embed/fmsPT_3spNo?si=vnSvCPN1eoBCmpzg" allowfullscreen></iframe>
+    </div>
+
+    <script>
+        // Get the modal
+        const modal = document.getElementById("image-modal");
+        const modalImg = document.getElementById("modal-image");
+        const images = document.querySelectorAll(".screenshot");
+        const closeBtn = document.querySelector(".close");
+
+        // Loop through each image to add click event
+        images.forEach(image => {
+            image.onclick = function () {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            };
+        });
+
+        // Close the modal when clicking on the close button
+        closeBtn.onclick = function () {
+            modal.style.display = "none";
+        };
+
+        // Close the modal when clicking outside the image
+        window.onclick = function (event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        };
+    </script>
+</body>
+</html>
