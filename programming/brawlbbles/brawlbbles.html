@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Brawlbbles - A fun and engaging brawler game featuring dynamic combat mechanics.">
+    <meta property="og:title" content="Brawlbbles">
+    <meta property="og:description" content="Explore Brawlbbles, an action-packed game with unique bubble-based combat mechanics.">
+    <meta property="og:image" content="brawlbbles-preview.png">
+    <meta property="og:url" content="https://your-website-url.com/brawlbbles.html">
+    <title>Brawlbbles</title>
+    <style>
+        body {
+            margin: 60px;
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            margin-top: 30px;
+            font-size: 2em;
+            border-bottom: 2px solid #00aaff;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .section {
+            margin: 40px auto;
+            max-width: 1000px;
+            background-color: #2a2a2a;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .feature {
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        
+        @media (max-width: 600px) {
+            iframe {
+                height: 400px;
+            }
+        }
+
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #ffffff;
+            color: #000000;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 1em;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: #cccccc;
+        }
+
+        .back-button:focus {
+            outline: 2px solid #ffffff;
+        }
+
+        @media (max-width: 480px) {
+            .back-button {
+                top: 70px;
+            }
+
+            h1 {
+                margin-top: 120px;
+            }
+        }
+
+        .try-game-button {
+            display: inline-block;
+            background-color: #00aaff;
+            color: #ffffff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.5em;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+
+        .documentation-button {
+            display: inline-block;
+            background-color: #00aaff;
+            color: #ffffff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+
+        .documentation-button:hover {
+            background-color: #0088cc;
+        }
+    </style>
+</head>
+<body>
+    <a href="../programming.html" class="back-button" aria-label="Go back to the home page">&#8592; Back</a>
+    <h1>Brawlbbles</h1>
+    <p>Brawlbbles is a silly party game where you try to burst each other with punches and power ups. This game was made entirely in C++ in Unreal Engine 5 as part of the Global Game Jam 2025 submission.</p>
+
+    <div class="section">
+        <h2>Demonstration Video</h2> <br>
+        <iframe width="100%" height="500px" src="https://www.youtube.com/embed/-7aX2nQn2LA?si=zccBMQqYu3Qf0qEb" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <div class="section">
+        <h2>Features</h2>
+
+        <div class="feature">
+            <h3>Simple Movement Mechanic</h3>
+            <p>
+                Players attack each other by punching and also evade attacks by floating, jumping, and rotating around.
+            </p>
+            <iframe width="100%" height="500px" src="https://www.youtube.com/embed/n-08nrtoNY8?si=XBGCu_aaIeKXVwZe" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="feature">
+            <h3>Local Multiplayer System</h3>
+            <p>
+                A polished local multiplayer system that supports up to 4 players but is modifiable to fit more players easily.
+            </p>
+            <iframe width="100%" height="500px" src="https://www.youtube.com/embed/vWCyLksgv1o?si=dr8ZsFM6jAosEsov" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    
+        <div class="feature">
+            <h3>Power Up System</h3>
+            <p>
+                A simple power up system that consists of the gun power up that allows the player to shoot bubbles in a specified amount of time, fart power up that allows the player to fart boosting the player's movement, and the invincibility power up that allows the player to not be able to take damage.
+            </p>
+            <iframe width="100%" height="500px" src="https://www.youtube.com/embed/NZw0dAjRQQI?si=mf3Q-zRgRhCljtdA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="feature">
+            <h3>Dynamic UI</h3>
+            <p>
+                UI that changes based on what power up the player has, the duration of power up, and also the scoring system based on how many players there are in the world.
+            </p>
+            <iframe width="100%" height="500px" src="https://www.youtube.com/embed/6PX3L4uW1T0?si=iFIDHEJtTQewkiyl" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="feature">
+            <h3>FMOD (Adaptive Sound) Implementation</h3>
+            <p>
+                Implemented FMOD with integration of adaptive sound and music according to the state of the game.
+            </p>
+            <iframe width="100%" height="500px" src="https://www.youtube.com/embed/m8RyE7l--vA?si=XSM2lPG4Vo0o91Dn"0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <a href="https://speed576.itch.io/brawlbbles" class="try-game-button" target="_blank">Full Game Page</a>
+</body>
+</html>
